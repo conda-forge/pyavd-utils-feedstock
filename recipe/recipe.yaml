@@ -61,8 +61,8 @@ tests:
           - python ${{ python_min }}.*
       script:
         - if: unix
-          then: abi3audit $SP_DIR/pyavd_utils/passwords.abi3.so $SP_DIR/pyavd_utils/validation.abi3.so -s -v --assume-minimum-abi3 ${{ python_min }}
-          else: abi3audit %SP_DIR%/pyavd_utils/passwords.pyd %SP_DIR%/pyavd_utils/validation.pyd -s -v --assume-minimum-abi3 ${{ python_min }}
+          then: abi3audit $SP_DIR/pyavd_utils/_bindings.abi3.so -s -v --assume-minimum-abi3 ${{ python_min }}
+          else: abi3audit %SP_DIR%/pyavd_utils/_bindings.pyd -s -v --assume-minimum-abi3 ${{ python_min }}
 
 about:
   homepage: https://github.com/aristanetworks/pyavd-utils
