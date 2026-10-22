@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.0.12"
+  version: "0.0.13"
 
 package:
   name: pyavd-utils
@@ -11,7 +11,7 @@ source:
   # No sdist is published to PyPI (only wheels), so we build from the tagged
   # GitHub release of the actual source repository instead.
   url: https://github.com/aristanetworks/pyavd-utils/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 30c1e8a83cafc5e8095a5069232e480edaa086e0c627fadbdfe8cdb1e81cdfb3
+  sha256: 497e30338b26c9548b8506b7a50cfee03194e6ee128aa9e7bfe9dc8c5ba2be4c
 
 build:
   number: 0
