@@ -40,7 +40,7 @@ requirements:
     - setuptools >=71.0
     - setuptools-rust >=1.12.0
   run:
-    - python
+    - python >=${{ python_min }}
 
 tests:
   - python:
@@ -58,6 +58,7 @@ tests:
       requirements:
         run:
           - abi3audit
+          - python ${{ python_min }}.*
       script:
         - if: unix
           then: abi3audit $SP_DIR/pyavd_utils/passwords.abi3.so $SP_DIR/pyavd_utils/validation.abi3.so -s -v --assume-minimum-abi3 ${{ python_min }}
